@@ -1,0 +1,43 @@
+<ion-content class="has-footer">
+    <div class="bar bar-subheader item-input-inset">
+        <div class="item-input-wrapper">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="search">
+        </div>
+    </div>
+    <div class="list" style="margin-top: 48px;">
+        <ion-list ng-controller="MainListCtrl">
+        <ion-item class="item-thumbnail-left" ng-repeat="item in items" 
+            href="#/chat/{{item.id}}">
+                <img ng-src="img/{{item.img}}.png">
+                <h2>{{item.name}}</h2>
+                <p>{{item.desc}}</p>
+                <ion-option-button class="button-stable">标记未读</ion-option-button>
+                <ion-option-button class="button-assertive">删除</ion-option-button>
+                <ion-delete-button class="ion-minus-circled" ng-click="items.splice($index, 1)"></ion-delete-button>
+            </ion-item>
+        </ion-list>
+    </div>
+
+</ion-content>
+<ion-footer-bar>
+    <div class="tabs tabs-icon-top">
+        <a class="tab-item">
+            <i class="icon ion-ios-chatbubble"></i>
+            微信
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-clipboard"></i>
+            通讯录
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-android-compass"></i>
+            发现
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-android-contact"></i>
+            我
+        </a>
+    </div>
+</ion-footer-bar>
+

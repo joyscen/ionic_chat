@@ -1,0 +1,21 @@
+<ion-view>
+    <ion-bar-header>
+        <div class="bar bar-header bar-dark">
+            <h1 class="title">微信</h1>
+            <button ng-click="openPopover($event)" class="button button-icon ion-plus-round"></button>
+        </div>
+    </ion-bar-header>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+</ion-view>
+<script id="addPopover.html" type="text/ng-template">
+    <ion-popover-view style="width: 150px; height: 220px;">
+        <ion-content>
+            <ion-list>
+                <ion-item class="icon ion-chatbubbles"> 发起群聊</ion-item>
+                <ion-item class="icon ion-person-add"> 添加朋友</ion-item>
+                <ion-item class="icon ion-qr-scanner"> 扫一扫</ion-item>
+                <ion-item class="icon ion-social-yen"> 收付款</ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-popover-view>
+</script>
