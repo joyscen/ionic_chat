@@ -52,7 +52,7 @@ first study mobile app develop
 
 
 
-<!--- 注： 安装依赖包 --->
+*注： 安装依赖包*
 
 sudo apt-get install lib32stdc++6
 sudo apt-get install lib32z1
